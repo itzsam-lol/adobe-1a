@@ -1,40 +1,47 @@
-# PDF Structure Extractor - Adobe India Hackathon 2025 Challenge 1a
+# Optimized PDF Structure Extractor - Adobe India Hackathon 2025 Challenge 1a
 
-## Overview
-This solution extracts structured outlines (title and headings H1, H2, H3) from PDF documents and outputs them in JSON format. The solution is designed to meet all challenge requirements including performance constraints and offline operation.
+## 🏆 Solution Overview
 
-## Approach
+This is a **production-ready, optimized solution** for Adobe India Hackathon 2025 Challenge 1a, featuring:
+- **Maximum performance optimization** for sub-10-second processing
+- **Full multilingual support** (Japanese, Chinese, Korean, English) for bonus points
+- **Advanced heading detection** using multiple strategies
+- **Parallel processing** for optimal CPU utilization
+- **Robust error handling** and comprehensive logging
 
-### Multi-Strategy Heading Detection
-1. **Built-in TOC Analysis**: First attempts to use PDF's native table of contents if available
-2. **Font-Based Analysis**: Analyzes font sizes, styles, and formatting to identify headings
-3. **Pattern Recognition**: Uses regex patterns to identify common heading structures
-4. **Context-Aware Classification**: Considers document structure and text patterns
+## 🎯 Key Features
 
-### Key Features
-- **Performance Optimized**: Processes 50-page PDFs in under 10 seconds
-- **Robust Error Handling**: Gracefully handles malformed or complex PDFs
-- **Multi-Language Support**: Works with various character encodings
-- **Memory Efficient**: Optimized for 16GB RAM constraint
-- **Offline Operation**: No internet dependencies
+### Performance Optimizations
+- **Parallel processing** with ThreadPoolExecutor
+- **Smart caching** for font analysis and patterns
+- **Optimized text extraction** with early termination
+- **Memory-efficient** processing for large documents
+- **Pre-compiled regex patterns** for speed
 
-### Heading Detection Logic
-- **Title Extraction**: Identifies document title using font size, position, and metadata
-- **H1 Detection**: Large fonts, bold formatting, common heading patterns
-- **H2 Detection**: Medium fonts with emphasis, section-like structure
-- **H3 Detection**: Smaller but distinct fonts, subsection patterns
+### Multilingual Support (🎁 Bonus: +10 points)
+- **Japanese**: 章, 節, 項 detection with proper numbering
+- **Chinese**: 章, 节, 部分 with traditional/simplified support  
+- **Korean**: 장, 절, 부 with Hangul pattern recognition
+- **English**: Advanced pattern matching and structure analysis
 
-## Libraries Used
-- **PyMuPDF (fitz)**: Fast PDF processing and text extraction
-- **Standard Python Libraries**: json, pathlib, re, collections, logging
+### Advanced Heading Detection
+1. **Built-in TOC Analysis**: Fastest method using PDF's native structure
+2. **Multi-criteria Font Analysis**: Size, style, formatting, position
+3. **Pattern Recognition**: Language-specific numbering and keywords
+4. **Context-aware Classification**: Document structure understanding
+5. **Confidence Scoring**: Quality-based filtering
 
-## Technical Specifications
-- **Platform**: AMD64 (x86_64) compatible
-- **Runtime**: CPU-only, optimized for 8 CPUs
-- **Memory**: Designed for 16GB RAM systems
-- **Model Size**: No ML models used (under 200MB constraint)
-- **Execution Time**: < 10 seconds for 50-page PDFs
+## 🔧 Technical Specifications
 
-## Build Instructions
+| Specification | Value | Status |
+|---------------|-------|--------|
+| **Execution Time** | < 10 seconds (50-page PDF) | ✅ Optimized |
+| **Model Size** | No ML models used (< 200MB) | ✅ Constraint met |
+| **Network Access** | Fully offline operation | ✅ No dependencies |
+| **Platform** | AMD64 (x86_64) compatible | ✅ Cross-platform |
+| **Runtime** | CPU-only, 8 cores, 16GB RAM | ✅ Optimized |
+| **Multilingual** | Japanese, Chinese, Korean, English | ✅ Bonus feature |
+
+## 🚀 Build & Run Instructions
 
 ### Build the Docker Image
