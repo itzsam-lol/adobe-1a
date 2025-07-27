@@ -62,7 +62,7 @@ The system provides comprehensive multilingual support for bonus scoring:
 ### Build Instructions
 
 1. **Prepare project files**
-* Clone the repository using `git clone https://github.com/your-username/your-r
+* Clone the repository using `git clone https://github.com/itzsam-lol/adobe-1a
 * Install required dependencies using `pip install -r requirements.txt`
 * Build the Docker image using `docker build -t bonus-scoring .`
 * Run the Docker container using `docker run -it --rm -v $(pwd):/app
